@@ -13,6 +13,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class BookingHomePageSteps {
+    BookingHomePage homePage = new BookingHomePage();
 
     @Given("User is on {string} page")
     public void userIsOnPage(String pageAddress) {
@@ -41,8 +42,6 @@ public class BookingHomePageSteps {
     public void userClickOnAButtonSearch() {
         new BookingHomePage().clickButtonSearch();
     }
-
-    BookingHomePage homePage = new BookingHomePage();
 
     @Then("{string} is displayed on the page")
     public void isDisplayedOnThePage(String hotelName) {
